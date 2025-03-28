@@ -65,7 +65,7 @@ export default function VideoMeetComponent() {
     // }
 
 
-    })
+    
 
     let getDislayMedia = () => {
         if (screen) {
