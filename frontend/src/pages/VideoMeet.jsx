@@ -549,24 +549,3 @@ export default function VideoMeetComponent() {
         </div>
     )
 }
-import { useEffect, useState } from "react";
-
-const VideoMeet = () => {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch("/api/someEndpoint") // No need to include full URL due to proxy
-      .then((response) => response.json())
-      .then((data) => setData(data))
-      .catch((error) => console.error("Error fetching data:", error));
-  }, []);
-
-  return (
-    <div>
-      <h1>Video Meeting Page</h1>
-      {data ? <p>{JSON.stringify(data)}</p> : <p>Loading...</p>}
-    </div>
-  );
-};
-
-export default VideoMeet;
